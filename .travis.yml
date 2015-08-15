@@ -1,6 +1,6 @@
 install:
 - sudo apt-get -qqy update
-- sudo apt-get -qqy install texlive-full
+- sudo apt-get -qqy install texlive
 
 script:
 - mkdir _build
