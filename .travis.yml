@@ -4,8 +4,7 @@ install:
 
 script:
 - mkdir _build
-- pdflatex -output-directory _build tex/your_file_1.tex
-- pdflatex -output-directory _build tex/your_file_2.tex
+- pdflatex -output-directory _build tex/article.tex
 
 deploy:
   provider: releases
