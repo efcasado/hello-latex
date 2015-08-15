@@ -1,7 +1,12 @@
+install:
+- sudo apt-get -qqy update
+- sudo apt-get -qqy install texlive-full
+
 script:
 - mkdir _build
 - pdflatex -output-directory _build tex/your_file_1.tex
 - pdflatex -output-directory _build tex/your_file_2.tex
+
 deploy:
   provider: releases
   api_key:
