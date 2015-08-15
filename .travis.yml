@@ -1,0 +1,11 @@
+script:
+- mkdir _build
+- pdflatex -output-directory _build tex/your_file_1.tex
+- pdflatex -output-directory _build tex/your_file_2.tex
+deploy:
+  provider: releases
+  api_key:
+    secure: jD6sYx3RUUb2hooJ+77PVDoOZpKEcfhpOXI0JXXlvgTR89ExVN32C+vLAcBRVIf13RAL+E6A+YKoHChGr/hp/o4m/VU/vtsP104R3uayY/XGJ6b6dm9d00fwMFP7uHDG4k+DQVD4hLMWbKthCtgpgE8mzUbm4ZhOVWZRR1E73CBKgxdqyOSzqwjDPubxhFleUQfzzua0yYZ/Z6Mi5GnTlAGIRSHRH35B7zdetgCvKKRU4vYUcDUsZRC8azbLqkWayCocVDAGpburtCbCOkUbYwMlPGS24Uvxdy1LusPL3RvnWMmlFhOH809Noo7bW1CqRLE74jvmVZMAqco7yW0Q0TdiqaBfyMuf5x0D/fTOG1CIPR6gxTdEd5/jNLYIaEFZ+A/XzAUtiD4WFzAhQJM8g3eoE/nc8owfToD7Jr5/2gKlJc36MKcmCnEcXg0GS3r5OvWKkytLEwy3jJzG9/jGkN7rRIzTmEFB0tpZ/Djz57PDvKsiW/WUFJvFIRxjvwVeuqyYjzoimWccaJyhVzSY1aatV+XeOSUT2P1DeJ6AAE+DWi2jtHyyrJY3rLR0sdA5KwHlk4O9ek91nVrJAuXfbV7Zim8Ph985jvy/1ED99TbA+kXYDyLvBKKKOR1fPZN6TsDCcrob3dDhW2BiSkmITy5PMjxR5xJfsw4n6++rRmc=
+  file: _build/article.pdf
+  on:
+    repo: efcasado/hello-latex
